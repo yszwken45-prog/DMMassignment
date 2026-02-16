@@ -51,11 +51,12 @@ def summarize_article(title, text, url):
 st.set_page_config(page_title="News Summarizer", page_icon="🔗")
 st.title("📡 RSS News Summarizer")
 
-# テーマごとのソース設定
+# テーマごとのソース設定（ここを最新・専門ソースに更新）
 THEMES = {
-    "生成AI最新情報": "https://www.itmedia.co.jp/news/subtop/ai/index.xml",
-    "暗号資産/Web3": "https://coinpost.jp/?feed=rss2",
-    "IT全般": "https://www.itmedia.co.jp/rss/2.0/itmedia_all.xml"
+    "生成AI最新情報 (ITmedia AI+)": "https://www.itmedia.co.jp/news/subtop/ai/index.xml",
+    "生成AI/テック (ギズモード)": "https://www.gizmodo.jp/index.xml",
+    "暗号資産/Web3 (CoinPost)": "https://coinpost.jp/?feed=rss2",
+    "最新技術動向 (Publickey)": "https://www.publickey1.jp/atom.xml"
 }
 
 theme_choice = st.sidebar.radio("テーマを選択", list(THEMES.keys()))
